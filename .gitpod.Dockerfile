@@ -17,11 +17,16 @@ RUN sudo apt-get update && sudo apt-get upgrade -y && \
 
 # Node.js setup
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
-    . "$NVM_DIR/nvm.sh" && \
+    export NVM_DIR="$HOME/.nvm" && \
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
     nvm install $NODE_VERSION && \
     nvm use $NODE_VERSION && \
+    npm install -g npm@latest && \
+    npm install -g pnpm@latest && \
     npm install -g typescript yarn node-gyp eslint prettier node-ovsx-sign && \
-    echo ". $NVM_DIR/nvm.sh" >> /home/gitpod/.bashrc.d/50-node
+    echo "export NVM_DIR=\"$HOME/.nvm\"" >> /home/gitpod/.bashrc && \
+    echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"" >> /home/gitpod/.bashrc && \
+    echo "[ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\"" >> /home/gitpod/.bashrc
 
 # Python setup
 ENV PYTHON_VERSION=3.12.7
@@ -34,6 +39,7 @@ RUN sudo install-packages python3-pip && \
     pyenv install $PYTHON_VERSION && \
     pyenv global $PYTHON_VERSION && \
     python3 -m pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    python3 -m pip install --no-cache-dir --upgrade pip && \
     python3 -m pip install --no-cache-dir --upgrade \
     bandit \
     coverage \
