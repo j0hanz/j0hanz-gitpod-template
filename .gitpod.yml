@@ -1,0 +1,24 @@
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - name: Install dependencies and extensions
+    init: |
+      echo "Installing VS Code extensions from .vsix files..."
+        for file in .vscode/extensions/*.vsix; do
+          echo "Installing extension: $file"
+          code --install-extension "$file" || echo "Failed to install $file"
+        done
+vscode:
+  extensions:
+    - ms-python.debugpy
+    - PKief.material-icon-theme
+    - charliermarsh.ruff
+    - ms-python.python
+    - ms-toolsai.jupyter
+    - ms-toolsai.jupyter-keymap
+    - batisteo.vscode-django
+    - esbenp.prettier-vscode
+    - christian-kohler.path-intellisense
+    - yzhang.markdown-all-in-one
+    - GitHub.github-vscode-theme
+    - batisteo.vscode-django
