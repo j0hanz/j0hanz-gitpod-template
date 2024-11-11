@@ -2,54 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - name: Setup Environment
-    init: |
-      echo "======================================"
-      echo "🚀 Preparing Workspace Environment 🚀"
-      echo "======================================"
-      echo "🔄 Please wait while the setup is in progress..."
-      sleep 3
-      echo "🚀 Running environment check script (check_installations.sh)..."
-      chmod +x .vscode/check_installations.sh
-      if .vscode/check_installations.sh; then
-        echo "✅ Environment check passed!"
-      else
-        echo "❌ Environment check failed! Please review the issues above."
-        exit 1
-      fi
-      sleep 1
-      clear
-      echo "🔄 Installing VS Code extensions from .vsix files..."
-      if compgen -G ".vscode/extensions/*.vsix" > /dev/null; then
-        for file in .vscode/extensions/*.vsix; do
-          echo "📦 Installing extension: $file"
-          if command -v code &> /dev/null && code --install-extension "$file"; then
-            echo "✅ Successfully installed: $file"
-          else
-            echo "❌ Failed to install: $file. Please check the file or try installing manually."
-          fi
-        done
-      else
-        echo "⚠️ No .vsix files found in .vscode/extensions. Skipping installation."
-      fi
-      sleep 1
-      clear
-      echo "🔍 Checking for requirements.txt file..."
-      if [ -f requirements.txt ]; then
-        echo "📄 requirements.txt found. Installing dependencies..."
-        if pip install -r requirements.txt; then
-          echo "✅ Dependencies from requirements.txt installed successfully!"
-        else
-          echo "❌ Failed to install dependencies. Please check requirements.txt for errors."
-          exit 1
-        fi
-      else
-        echo "⚠️ requirements.txt not found. Skipping dependency installation."
-      fi
-      sleep 1
-      clear
-      echo "======================================"
-      echo "✅ Setup Complete! Your environment is ready. ✅"
-      echo "======================================"
+    init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.py
 vscode:
   extensions:
     - ms-python.debugpy
