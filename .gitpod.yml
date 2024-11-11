@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - name: Setup Environment
-    init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.py
+    init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
 vscode:
   extensions:
     - ms-python.debugpy
