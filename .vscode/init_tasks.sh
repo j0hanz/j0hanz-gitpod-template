@@ -95,6 +95,9 @@ install_requirements
 if [ $? -eq 0 ]; then
     python -c "import sys; sys.path.append('.vscode'); import fancy_text; print(fancy_text.long_line)"
     echo "✅ Setup complete! You are ready to start coding."
+    echo ""
+    # Run display_repo_info.py
+    python .vscode/display_repo_info.py
 else
     python -c "import sys; sys.path.append('.vscode'); import fancy_text; print(fancy_text.long_line)"
     echo "❌ Setup failed! Please check the logs and retry."
