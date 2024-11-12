@@ -4,7 +4,7 @@ tasks:
   - name: Setup Environment
     init: |
       . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
-    command: python ${GITPOD_REPO_ROOT}/.vscode/display_repo_info.py
+      python ${GITPOD_REPO_ROOT}/.vscode/display_repo_info.py
 vscode:
   extensions:
     - ms-python.debugpy
