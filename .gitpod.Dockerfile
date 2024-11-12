@@ -1,7 +1,5 @@
 FROM gitpod/workspace-base
 
-ENV TRIGGER_REBUILD=1
-
 # Environment variables
 ENV PYENV_ROOT="/home/gitpod/.pyenv"
 ENV PATH="$PYENV_ROOT/bin:$PATH:$PYENV_ROOT/shims"
@@ -70,6 +68,11 @@ RUN mkdir -p ~/.pg_ctl/bin ~/.pg_ctl/sockets && \
 
 # Install Heroku CLI
 RUN curl https://cli-assets.heroku.com/install.sh | sh
+
+RUN echo 'alias pip3="$PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip"' >> ~/.bashrc && \
+    echo 'alias pip="$PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip"' >> ~/.bashrc && \
+    echo 'alias python3="$PYENV_ROOT/versions/$PYTHON_VERSION/bin/python"' >> ~/.bashrc && \
+    echo 'alias python="$PYENV_ROOT/versions/$PYTHON_VERSION/bin/python"' >> ~/.bashrc
 
 # Allow React and Django REST Framework to run together on Gitpod
 ENV DANGEROUSLY_DISABLE_HOST_CHECK=true
