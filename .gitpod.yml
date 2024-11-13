@@ -6,6 +6,7 @@ tasks:
       clear
       . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
     command: |
+      clear
       python ${GITPOD_REPO_ROOT}/.vscode/display_repo_info.py
 vscode:
   extensions:
