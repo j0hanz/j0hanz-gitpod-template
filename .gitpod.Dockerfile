@@ -8,6 +8,7 @@ ENV NVM_DIR="/home/gitpod/.nvm"
 ENV PATH="$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH"
 ENV PGDATA="/workspace/.pgsql/data"
 ENV PYTHON_VERSION=3.12.7
+ENV PYTHON_VERSION_13=3.13.0
 
 # Update and install common dependencies
 RUN sudo apt-get update && sudo apt-get upgrade -y && \
@@ -38,6 +39,7 @@ RUN curl -fsSL https://pyenv.run | bash && \
     echo 'eval "$(pyenv init --path)"' >> ~/.bashrc && \
     echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc && \
     pyenv install $PYTHON_VERSION && \
+    pyenv install $PYTHON_VERSION_13 && \
     pyenv global $PYTHON_VERSION && \
     pip install --no-cache-dir pip && \
     pip install --no-cache-dir --upgrade pip setuptools wheel && \
