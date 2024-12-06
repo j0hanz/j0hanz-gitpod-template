@@ -19,7 +19,7 @@ echo
 python -c "import sys; sys.path.append('.vscode'); import fancy_text; print(fancy_text.long_line)"
 
 # Update and upgrade system packages
-sudo apt-get update -y && sudo apt-get dist-upgrade -y
+sudo apt-get update -y && sudo apt-get full-upgrade -y
 
 # Function to check installation with limited output
 check_installation() {
