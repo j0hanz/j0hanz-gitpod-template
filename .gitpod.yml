@@ -16,7 +16,6 @@ vscode:
     - ms-toolsai.jupyter
     - ms-toolsai.jupyter-keymap
     - ms-toolsai.jupyter-renderers
-    - batisteo.vscode-django
     - esbenp.prettier-vscode
     - christian-kohler.path-intellisense
     - yzhang.markdown-all-in-one
@@ -25,3 +24,4 @@ vscode:
     - formulahendry.auto-rename-tag
     - formulahendry.auto-close-tag
     - formulahendry.code-runner
+    - donjayamanne.python-extension-pack
