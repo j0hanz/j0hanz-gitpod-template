@@ -12,11 +12,12 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 
 ## ✨ Features
 
-- **Python**: `3.12.7` & `3.13.0` installed via `pyenv`
-- **Node.js**: `20.18.0` installed via `nvm`
+- **Python**: `3.12` & `3.13` installed via `pyenv`
+- **Node.js**: `20.18.1` installed via `nvm`
 - **MongoDB Shell**: `mongosh` for database interaction
 - **PostgreSQL**: `16` pre-installed and configurable
 - **Heroku CLI**: For seamless deployment to Heroku
+- **AWS CLI**: For managing AWS services
 - **VS Code Extensions**: Pre-installed extensions for Python, Django, and more
 - **Linters & Formatters**: `djlint` for Django, `ruff` for Python
 - **Custom Scripts**: For initialization and repo info display
@@ -45,18 +46,18 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 
 ### Python Setup
 
-- **Versions**: 3.12.7 (default) and 3.13.0 (via `pyenv`)
+- **Versions**: 3.12 (default) and 3.13 (via `pyenv`)
 - **Global Tools**:
   - `bandit`, `coverage`, `djlint`, `ruff`, `pytest`, `mypy`, `isort`, `pylint`, and more
 - **Aliases**:
-  - `python` → Python 3.12.7
+  - `python` → Python 3.12
   - `pip` → Corresponding pip version
 
 ---
 
 ### Node.js Setup
 
-- **Version**: 20.18.0 (via `nvm`)
+- **Version**: 20.18.1 (via `nvm`)
 - **Global Tools**:
   - `npm`, `pnpm`, `yarn`, `typescript`, `eslint`, `prettier`, and `node-gyp`
 
@@ -98,6 +99,8 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
   djlint --reformat templates/
   ```
 
+- **Documentation**: [djlint Documentation](https://djlint.com/)
+
 ### **ruff**: Fast Python Linter
 
 - **Config**: In `pyproject.toml`
@@ -107,6 +110,8 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
   ruff check .
   ruff check . --fix
   ```
+
+- **Documentation**: [ruff Documentation](https://beta.ruff.rs/docs/)
 
 ---
 
