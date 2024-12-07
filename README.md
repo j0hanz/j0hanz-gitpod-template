@@ -1,12 +1,12 @@
 # J0hanz Gitpod Template
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/j0hanz/j0hanz-gitpod-template)](https://github.com/j0hanz/j0hanz-gitpod-template/commits/main)[![GitHub repo size](https://img.shields.io/github/repo-size/j0hanz/j0hanz-gitpod-template)](https://github.com/j0hanz/j0hanz-gitpod-template)
+[![GitHub last commit](https://img.shields.io/github/last-commit/j0hanz/j0hanz-gitpod-template)](https://github.com/j0hanz/j0hanz-gitpod-template/commits/main) [![GitHub repo size](https://img.shields.io/github/repo-size/j0hanz/j0hanz-gitpod-template)](https://github.com/j0hanz/j0hanz-gitpod-template)
 
 ---
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/j0hanz/j0hanz-gitpod-template)
 
-A pre-configured development environment for **Python**, **Django**, **Node.js**, **MongoDB**, **PostgreSQL**, and **Heroku** deployments. Equipped with essential tools, linters, formatters, and VS Code extensions to supercharge your workflow. ✨
+A pre-configured development environment for **Python**, **Django**, **Node.js**, **MongoDB**, **PostgreSQL**, and **Heroku** deployments. Equipped with essential tools, linters, formatters, and VS Code extensions to enhance your workflow. ✨
 
 ---
 
@@ -20,7 +20,7 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 - **AWS CLI**: For managing AWS services
 - **VS Code Extensions**: Pre-installed extensions for Python, Django, and more
 - **Linters & Formatters**: `djlint` for Django, `ruff` for Python
-- **Custom Scripts**: For initialization and repo info display
+- **Custom Scripts**: For initialization and repository information display
 
 ---
 
@@ -37,8 +37,8 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 
    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/j0hanz/j0hanz-gitpod-template)
 
-2. **Build**: Workspace builds automatically using `.gitpod.yml` and `.gitpod.Dockerfile`
-3. **Initialize**: Setup runs scripts to install dependencies and extensions
+2. **Build**: The workspace builds automatically using `.gitpod.yml` and `.gitpod.Dockerfile`.
+3. **Initialize**: Setup runs scripts to install dependencies and extensions.
 
 ---
 
@@ -53,15 +53,11 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
   - `python` → Python 3.12
   - `pip` → Corresponding pip version
 
----
-
 ### Node.js Setup
 
 - **Version**: 20.18.1 (via `nvm`)
 - **Global Tools**:
   - `npm`, `pnpm`, `yarn`, `typescript`, `eslint`, `prettier`, and `node-gyp`
-
----
 
 ### PostgreSQL Setup
 
@@ -70,20 +66,16 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
   - Start: `~/.pg_ctl/bin/pg_start`
   - Stop: `~/.pg_ctl/bin/pg_stop`
 
----
-
 ### MongoDB Shell
 
-- Installed: `mongosh` for database interaction
-
----
+- **Installed**: `mongosh` for database interaction
 
 ### VS Code Extensions
 
-- Python: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [Django](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django)
-- Linters: [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- Markdown: [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-- Utilities: [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme), [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+- **Python**: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [Django](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django)
+- **Linters**: [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- **Markdown**: [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- **Utilities**: [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme), [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 
 ---
 
@@ -126,9 +118,9 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 
 Key exclusions:
 
-- Python: `__pycache__/`, `.pytest_cache`, `db.sqlite3`
-- Node.js: `node_modules/`
-- Environment: `.env`, `env.py`
+- **Python**: `__pycache__/`, `.pytest_cache`, `db.sqlite3`
+- **Node.js**: `node_modules/`
+- **Environment**: `.env`, `env.py`
 
 ---
 
