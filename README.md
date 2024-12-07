@@ -81,29 +81,49 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 
 ## ⚡ Linters & Formatters
 
-### **djlint**: Django Template Linter
+### **Djlint**: Django Template Linter
 
 - **Config**: In `pyproject.toml`
+- **Installation**: Pre-installed in the environment
 - **Usage**:
+  - To lint Django templates:
 
-  ```bash
-  djlint templates/
-  djlint --reformat templates/
-  ```
+    ```bash
+    djlint /path/to/templates
+    ```
 
-- **Documentation**: [djlint Documentation](https://djlint.com/)
+  - To reformat Django templates:
 
-### **ruff**: Fast Python Linter
+    ```bash
+    djlint --reformat /path/to/templates
+    ```
+
+- [Documentation](https://djlint.com/)
+
+### **Ruff**: Fast Python Linter
 
 - **Config**: In `pyproject.toml`
+- **Installation**: Pre-installed in the environment
 - **Usage**:
+  - To check Python files for linting errors:
 
-  ```bash
-  ruff check .
-  ruff check . --fix
-  ```
+    ```bash
+    ruff check path/to/file.py
+    ```
 
-- **Documentation**: [ruff Documentation](https://beta.ruff.rs/docs/)
+  - To automatically fix linting errors:
+
+    ```bash
+    ruff check path/to/file.py --fix
+    ```
+
+  - To format Python files:
+
+    ```bash
+    ruff format path/to/file.py
+    ```
+
+- [Documentation](https://beta.ruff.rs/docs/)
 
 ---
 
