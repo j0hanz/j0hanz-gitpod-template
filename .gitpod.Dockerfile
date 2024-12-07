@@ -50,6 +50,15 @@ ENV PYTHONUSERBASE=/workspace/.pip-modules \
     PIP_USER=yes
 ENV PATH=$PYTHONUSERBASE/bin:$PATH
 
+# Install AWS CLI
+RUN sudo apt-get update && \
+    sudo apt-get install -y unzip && \
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip awscliv2.zip && \
+    sudo ./aws/install && \
+    rm -rf awscliv2.zip aws && \
+    sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/*
+
 # MongoDB setup
 RUN sudo curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-7.0.gpg && \
     echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list && \
@@ -71,6 +80,7 @@ RUN mkdir -p ~/.pg_ctl/bin ~/.pg_ctl/sockets && \
 # Install Heroku CLI
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
+# Set up aliases for Python and pip
 RUN echo 'alias pip3="$PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip"' >> ~/.bashrc && \
     echo 'alias pip="$PYENV_ROOT/versions/$PYTHON_VERSION/bin/pip"' >> ~/.bashrc && \
     echo 'alias python3="$PYENV_ROOT/versions/$PYTHON_VERSION/bin/python"' >> ~/.bashrc && \
