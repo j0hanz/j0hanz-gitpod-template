@@ -98,7 +98,7 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
     djlint --reformat /path/to/templates
     ```
 
-- [Documentation](https://djlint.com/)
+- [Documentation](https://www.djlint.com/docs/getting-started/)
 
 ### **Ruff**: Fast Python Linter
 
