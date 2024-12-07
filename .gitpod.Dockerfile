@@ -3,12 +3,12 @@ FROM gitpod/workspace-base
 # Environment variables
 ENV PYENV_ROOT="/home/gitpod/.pyenv"
 ENV PATH="$PYENV_ROOT/bin:$PATH:$PYENV_ROOT/shims"
-ENV NODE_VERSION=20.18.0
+ENV NODE_VERSION=20.18.1
 ENV NVM_DIR="/home/gitpod/.nvm"
 ENV PATH="$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH"
 ENV PGDATA="/workspace/.pgsql/data"
-ENV PYTHON_VERSION=3.12.7
-ENV PYTHON_VERSION_13=3.13.0
+ENV PYTHON_VERSION=3.12.8
+ENV PYTHON_VERSION_13=3.13.1
 
 # Update and install common dependencies
 RUN sudo apt-get update && sudo apt-get upgrade -y && \
