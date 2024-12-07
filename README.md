@@ -123,7 +123,7 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
     ruff format path/to/file.py
     ```
 
-- [Documentation](https://beta.ruff.rs/docs/)
+- [Documentation](https://docs.astral.sh/ruff/)
 
 ---
 
