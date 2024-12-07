@@ -50,23 +50,31 @@ target-version = "py312"
 
 [tool.ruff.lint]
 ignore = [
+    "C415",
     "Q000",
     "Q001",
     "Q003",
     "F401",
     "DJ001",
     "PLR",
+    "PIE796",
+    "W191",
+    "W505",
 ]
 select = [
+    "C",
     "E4",
     "E7",
     "E9",
+    "EM",
     "F",
     "DJ",
     "Q",
     "I",
     "UP",
     "PL",
+    "PIE",
+    "W",
 ]
 
 [tool.ruff.lint.flake8-quotes]
@@ -82,3 +90,5 @@ docstring-quotes = "double"
 
 [tool.ruff.format]
 quote-style = "single"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
