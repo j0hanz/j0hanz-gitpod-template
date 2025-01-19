@@ -6,7 +6,7 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/j0hanz/j0hanz-gitpod-template)
 
-A pre-configured development environment for **Python**, **Django**, **Node.js**, **MongoDB**, **PostgreSQL**, and **Heroku** deployments. Equipped with essential tools, linters, formatters, and VS Code extensions to enhance your workflow.
+A pre-configured development environment for **Python**, **Django**, **Node.js**, **MongoDB**, **PostgreSQL**, **AWS** and **Heroku**. Equipped with essential tools, linters, formatters, and VS Code extensions to enhance your workflow.
 
 ---
 
@@ -31,14 +31,63 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 - Create a [Gitpod Account](https://www.gitpod.io/)
 - Access the [repository](https://github.com/j0hanz/j0hanz-gitpod-template)
 
-### Launch the Workspace
+### Setup
 
-1. **Start**: Click the button below to open in Gitpod:
+1. **Use This Template**: Click "Use this template" on the repository page to create a new repository.
+2. **Open in Gitpod**: Click the button below to open in Gitpod:
 
    [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/j0hanz/j0hanz-gitpod-template)
 
-2. **Build**: The workspace builds automatically using `.gitpod.yml` and `.gitpod.Dockerfile`.
-3. **Initialize**: Setup runs scripts to install dependencies and extensions.
+3. **Initialize the Workspace**: The workspace builds and initializes automatically.
+4. **Start Coding**: Begin coding immediately with the pre-configured environment.
+
+### Deployment to Heroku
+
+#### Web Interface
+
+1. **Create a Heroku Account**: Sign up for [Heroku](https://signup.heroku.com/).
+2. **Prepare Your Application**: Push your code to GitHub and commit all changes.
+3. **Create a New Heroku Application**:
+   - Log in to Heroku and create a new app.
+   - Choose a unique name and region.
+4. **Set Environment Variables**: Add required environment variables under "Config Vars" in your app's settings.
+5. **Deploy Your Application**:
+   - Connect to your GitHub repository in the "Deploy" tab.
+   - Choose the branch to deploy and click "Deploy Branch".
+6. **Verify Deployment**: Open the provided URL to ensure your application is running.
+
+#### CLI Interface
+
+1. **Login to Heroku**: Ensure you are logged in:
+
+   ```sh
+   heroku login
+   ```
+
+2. **Create a New Heroku App**: Create a new app:
+
+   ```sh
+   heroku create <your-app-name>
+   ```
+
+3. **Deploy to Heroku**: Push your code:
+
+   ```sh
+   git push heroku main
+   ```
+
+4. **Open Your App**: Open your deployed app:
+
+   ```sh
+   heroku open
+   ```
+
+5. **Manage Your App**: Use the Heroku CLI for management:
+
+   ```sh
+   heroku logs --tail
+   heroku ps:scale web=1
+   ```
 
 ---
 
