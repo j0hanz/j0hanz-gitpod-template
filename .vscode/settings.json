@@ -25,17 +25,26 @@
     "source.fixAll.eslint": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 16,
-  "editor.formatOnSave": true,
-  "editor.inlineSuggest.suppressSuggestions": true,
-  "editor.suggestSelection": "recentlyUsedByPrefix",
-  "editor.tabCompletion": "on",
-  "editor.wordWrap": "on",
 
-  // Terminal Settings
-  "terminal.integrated.fontSize": 16,
+  // Font & Editor
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.lineHeight": 22,
+  "editor.letterSpacing": 0.5,
+  "editor.smoothScrolling": true,
+
+  // Terminal
+  "terminal.integrated.fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 14,
+
+  // Bracket Colorization
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+
+  // Minimap
+  "editor.minimap.enabled": true,
+  "editor.minimap.scale": 2,
 
   // Formatters for Specific Languages
   "[django-html]": { "editor.defaultFormatter": "monosans.djlint" },
@@ -59,9 +68,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-  },
-  "[shellscript]": {
-    "editor.defaultFormatter": "shakram02.bash-beautify"
   },
 
   // Prettier Settings
@@ -88,13 +94,17 @@
   // CSS and Emmet Settings
   "css.lint.unknownAtRules": "ignore",
   "css.validate": false,
-  "emmet.includeLanguages": { "django-html": "html" },
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
 
   // UI and Git Settings
   "diffEditor.ignoreTrimWhitespace": false,
   "explorer.confirmDragAndDrop": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
   "git.autofetch": true,
-  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.colorTheme": "Night Owl",
   "workbench.iconTheme": "material-icon-theme",
 
   // Additional Extensions
