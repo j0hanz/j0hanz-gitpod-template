@@ -12,11 +12,7 @@ ENV PYTHON_VERSION_13=3.13.1
 
 # Update and install common dependencies
 RUN sudo apt-get update && sudo apt-get upgrade -y && \
-    sudo apt-get install -y curl wget gnupg software-properties-common && \
-    sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/*
-
-# Install essential development tools and libraries
-RUN sudo apt-get update && sudo apt-get install -y build-essential libpq-dev libssl-dev libffi-dev zlib1g-dev graphviz && \
+    sudo apt-get install -y curl wget gnupg software-properties-common build-essential libpq-dev libssl-dev libffi-dev zlib1g-dev graphviz unzip && \
     sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/*
 
 # Node.js setup
@@ -25,9 +21,7 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | b
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
     nvm install $NODE_VERSION && \
     nvm use $NODE_VERSION && \
-    npm install -g npm@latest && \
-    npm install -g pnpm@latest && \
-    npm install -g typescript yarn node-gyp eslint prettier node-ovsx-sign && \
+    npm install -g npm@latest pnpm@latest typescript yarn node-gyp eslint prettier node-ovsx-sign && \
     echo "export NVM_DIR=\"$HOME/.nvm\"" >> /home/gitpod/.bashrc && \
     echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\"" >> /home/gitpod/.bashrc && \
     echo "[ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\"" >> /home/gitpod/.bashrc
@@ -51,9 +45,7 @@ ENV PYTHONUSERBASE=/workspace/.pip-modules \
 ENV PATH=$PYTHONUSERBASE/bin:$PATH
 
 # Install AWS CLI
-RUN sudo apt-get update && \
-    sudo apt-get install -y unzip && \
-    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
     sudo ./aws/install && \
     rm -rf awscliv2.zip aws && \
