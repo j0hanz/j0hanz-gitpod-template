@@ -6,25 +6,25 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/j0hanz/j0hanz-gitpod-template)
 
-A pre-configured development environment for **Python**, **Django**, **Node.js**, **MongoDB**, **PostgreSQL**, and **Heroku** deployments. Equipped with essential tools, linters, formatters, and VS Code extensions to enhance your workflow. ✨
+A pre-configured development environment for **Python**, **Django**, **Node.js**, **MongoDB**, **PostgreSQL**, and **Heroku** deployments. Equipped with essential tools, linters, formatters, and VS Code extensions to enhance your workflow.
 
 ---
 
-## ✨ Features
+## Features
 
-- **Python**: `3.12` & `3.13` installed via `pyenv`
-- **Node.js**: `20.18.1` installed via `nvm`
-- **MongoDB Shell**: `mongosh` for database interaction
-- **PostgreSQL**: `16` pre-installed and configurable
-- **Heroku CLI**: For seamless deployment to Heroku
-- **AWS CLI**: For managing AWS services
-- **VS Code Extensions**: Pre-installed extensions for Python, Django, and more
-- **Linters & Formatters**: `djlint` for Django, `ruff` for Python
-- **Custom Scripts**: For initialization and repository information display
+- **Python**: `3.12` & `3.13` via `pyenv`
+- **Node.js**: `20.18.1` via `nvm`
+- **MongoDB Shell**: `mongosh`
+- **PostgreSQL**: `16`
+- **Heroku CLI**
+- **AWS CLI**
+- **VS Code Extensions**: Python, Django, and more
+- **Linters & Formatters**: `djlint`, `ruff`
+- **Custom Scripts**: Initialization and repository info display
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -42,33 +42,27 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 
 ---
 
-## 🛠 Environment Details
+## Environment Details
 
 ### Python Setup
 
-- **Versions**: 3.12 (default) and 3.13 (via `pyenv`)
-- **Global Tools**:
-  - `bandit`, `coverage`, `djlint`, `ruff`, `pytest`, `mypy`, `isort`, `pylint`, and more
-- **Aliases**:
-  - `python` → Python 3.12
-  - `pip` → Corresponding pip version
+- **Versions**: 3.12 (default) and 3.13
+- **Global Tools**: `bandit`, `coverage`, `djlint`, `ruff`, `pytest`, `mypy`, `isort`, `pylint`, and more
+- **Aliases**: `python` → Python 3.12, `pip` → Corresponding pip version
 
 ### Node.js Setup
 
-- **Version**: 20.18.1 (via `nvm`)
-- **Global Tools**:
-  - `npm`, `pnpm`, `yarn`, `typescript`, `eslint`, `prettier`, and `node-gyp`
+- **Version**: 20.18.1
+- **Global Tools**: `npm`, `pnpm`, `yarn`, `typescript`, `eslint`, `prettier`, `node-gyp`
 
 ### PostgreSQL Setup
 
 - **Version**: PostgreSQL 16
-- **Scripts**:
-  - Start: `~/.pg_ctl/bin/pg_start`
-  - Stop: `~/.pg_ctl/bin/pg_stop`
+- **Scripts**: Start: `~/.pg_ctl/bin/pg_start`, Stop: `~/.pg_ctl/bin/pg_stop`
 
 ### MongoDB Shell
 
-- **Installed**: `mongosh` for database interaction
+- **Installed**: `mongosh`
 
 ### VS Code Extensions
 
@@ -79,62 +73,35 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 
 ---
 
-## ⚡ Linters & Formatters
+## Linters & Formatters
 
 ### **Djlint**: Django Template Linter
 
 - **Config**: In `pyproject.toml`
-- **Installation**: Pre-installed in the environment
 - **Usage**:
-  - To lint Django templates:
-
-    ```bash
-    djlint /path/to/templates
-    ```
-
-  - To reformat Django templates:
-
-    ```bash
-    djlint --reformat /path/to/templates
-    ```
-
+  - Lint: `djlint /path/to/templates`
+  - Reformat: `djlint --reformat /path/to/templates`
 - [Documentation](https://www.djlint.com/docs/getting-started/)
 
 ### **Ruff**: Fast Python Linter
 
 - **Config**: In `pyproject.toml`
-- **Installation**: Pre-installed in the environment
 - **Usage**:
-  - To check Python files for linting errors:
-
-    ```bash
-    ruff check path/to/file.py
-    ```
-
-  - To automatically fix linting errors:
-
-    ```bash
-    ruff check path/to/file.py --fix
-    ```
-
-  - To format Python files:
-
-    ```bash
-    ruff format path/to/file.py
-    ```
-
+  - Check: `ruff check path/to/file.py`
+  - Fix: `ruff check path/to/file.py --fix`
+  - Format: `ruff format path/to/file.py`
 - [Documentation](https://docs.astral.sh/ruff/)
 
 ---
 
-## 📜 Custom Scripts
+## Custom Scripts
 
 - **Initialization Script**: Automates dependency installation and environment setup
 - **Repo Info Display**: Provides repository and branch details, last commit info, and user metadata
 
 ---
 
-## 📄 Git Ignore
+## Git Ignore
 
 Key exclusions:
 
@@ -146,4 +113,4 @@ Key exclusions:
 
 This template is your all-in-one solution for efficient, robust development. Start building without worrying about setup.
 
-🚀 **Happy Coding!** 🚀
+**Happy Coding!**
