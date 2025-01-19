@@ -1,13 +1,21 @@
-core.Microsoft*
-core.mongo*
-core.python*
-env.py
-.env
+# Python
 __pycache__/
 *.py[cod]
-node_modules/
-.github/
-cloudinary_python.txt
 db.sqlite3
-/staticfiles/
+
+# Node.js
+node_modules/
+
+# Environment
+.env
+env.py
+
+# Core dumps
+core.*
+
+# Git
+.github/
 .ruff_cache
+
+# Static files
+/staticfiles/
