@@ -59,6 +59,8 @@ def get_latest_commit_date() -> str | None:
         return f'{delta} d'
     except subprocess.CalledProcessError:
         return 'Unknown'
+    except ValueError:
+        return 'Invalid date format'
 
 
 def main() -> None:
