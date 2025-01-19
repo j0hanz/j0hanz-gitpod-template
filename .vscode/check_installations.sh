@@ -9,11 +9,11 @@ check_installation() {
     fi
 }
 
+# List of tools to check
+tools=("python" "pip" "node" "npm" "psql" "mongosh" "heroku")
+names=("Python" "pip" "Node.js" "npm" "PostgreSQL" "MongoDB" "Heroku CLI")
+
 # Checking software installations
-check_installation "python" "Python"
-check_installation "pip" "pip"
-check_installation "node" "Node.js"
-check_installation "npm" "npm"
-check_installation "psql" "PostgreSQL"
-check_installation "mongosh" "MongoDB"
-check_installation "heroku" "Heroku CLI"
+for i in "${!tools[@]}"; do
+    check_installation "${tools[$i]}" "${names[$i]}"
+done
