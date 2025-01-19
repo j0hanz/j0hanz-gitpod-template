@@ -2,9 +2,8 @@
 
 # Function to check installation
 check_installation() {
-    $1 --version &> /dev/null
-    if [ $? -eq 0 ]; then
-        $1 --version
+    if command -v "$1" &> /dev/null; then
+        "$1" --version
     else
         echo "$2 is not installed"
     fi
