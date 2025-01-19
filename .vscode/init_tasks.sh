@@ -3,7 +3,7 @@
 python -c "import sys; sys.path.append('.vscode'); import fancy_text; print(fancy_text.template_name)"
 
 # This script is used to setup the workspace environment for the Gitpod template.
-# It installs VS Code extensions, Python dependencies, and checks for software installations.
+# It installs Python dependencies and checks for software installations.
 # It also displays a final message with the status of the setup process.
 
 # Set delay so user can see the initial message before the setup process starts
@@ -19,7 +19,10 @@ echo
 python -c "import sys; sys.path.append('.vscode'); import fancy_text; print(fancy_text.long_line)"
 
 # Update and upgrade system packages
-sudo apt-get update -y && sudo apt-get full-upgrade -y
+if ! sudo apt-get update -y && sudo apt-get full-upgrade -y; then
+    echo "❌ Failed to update and upgrade system packages."
+    exit 1
+fi
 
 # Function to check installation with limited output
 check_installation() {
@@ -28,33 +31,6 @@ check_installation() {
         echo "✅ $2 is installed ($version)"
     else
         echo "❌ $2 is not installed"
-    fi
-}
-
-# Function to install VS Code extensions with limited output
-install_vscode_extensions() {
-    python -c "import sys; sys.path.append('.vscode'); import fancy_text; print(fancy_text.long_line)"
-    echo -n "🔄 Installing extensions"
-    for i in $(seq 1 4); do
-        sleep 0.75
-        echo -n "."
-    done
-    echo
-    EXT_DIR="${GITPOD_REPO_ROOT}/.vscode/extensions"
-    if [ -d "$EXT_DIR" ]; then
-        for file in "$EXT_DIR"/*.vsix; do
-            if [ -f "$file" ]; then
-                extension_name=$(basename "$file")
-                echo "Installing extension: $extension_name"
-                if code --install-extension "$file"; then
-                    echo "✅ Successfully installed: $extension_name"
-                else
-                    echo "❌ Failed to install: $extension_name"
-                fi
-            fi
-        done
-    else
-        echo "⚠️ No .vsix files found in $EXT_DIR. Skipping installation."
     fi
 }
 
@@ -79,15 +55,18 @@ install_requirements() {
     fi
 }
 
-# Install VS Code extensions
-install_vscode_extensions
-
 # Install Python dependencies
-install_requirements
+if ! install_requirements; then
+    echo "❌ Setup failed during dependency installation."
+    exit 1
+fi
 
 pip list
 
 # Check versions of dependencies
+if ! command -v pip-review >/dev/null 2>&1; then
+    pip install pip-review
+fi
 pip-review
 
 # Check for installations of software tools
