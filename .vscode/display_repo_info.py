@@ -1,6 +1,7 @@
 import os
 import subprocess
 from datetime import UTC, datetime
+from pathlib import Path
 
 import fancy_text
 
@@ -13,7 +14,7 @@ def get_repo_name():
             .strip()
             .decode('utf-8')
         )
-        return os.path.basename(repo_path)
+        return Path(repo_path).name
     except subprocess.CalledProcessError:
         return 'Unknown Repository'
 
@@ -57,10 +58,8 @@ def get_latest_commit_date() -> str | None:
         if delta == 1:
             return 'yesterday'
         return f'{delta} d'
-    except subprocess.CalledProcessError:
+    except (subprocess.CalledProcessError, ValueError):
         return 'Unknown'
-    except ValueError:
-        return 'Invalid date format'
 
 
 def main() -> None:
