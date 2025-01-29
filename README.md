@@ -6,19 +6,18 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/j0hanz/j0hanz-gitpod-template)
 
-A pre-configured development environment for **Python**, **Django**, **Node.js**, **MongoDB**, **PostgreSQL**, **AWS** and **Heroku**. Equipped with essential tools, linters, formatters, and VS Code extensions to enhance your workflow.
+A pre-configured development environment. This template is your all-in-one solution for efficient, robust development.
 
 ---
 
 ## Features
 
-- **Python**: `3.12` & `3.13` via `pyenv`
+- **Python**: `3.12` via `pyenv`
 - **Node.js**: `20.18.1` via `nvm`
 - **MongoDB Shell**: `mongosh`
 - **PostgreSQL**: `16`
 - **Heroku CLI**
 - **AWS CLI**
-- **VS Code Extensions**: Python, Django, and more
 - **Linters & Formatters**: `djlint`, `ruff`
 - **Custom Scripts**: Initialization and repository info display
 
@@ -95,7 +94,6 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 
 ### Python Setup
 
-- **Versions**: 3.12 (default) and 3.13
 - **Global Tools**: `bandit`, `coverage`, `djlint`, `ruff`, `pytest`, `mypy`, `isort`, `pylint`, and more
 - **Aliases**: `python` → Python 3.12, `pip` → Corresponding pip version
 
@@ -112,13 +110,6 @@ A pre-configured development environment for **Python**, **Django**, **Node.js**
 ### MongoDB Shell
 
 - **Installed**: `mongosh`
-
-### VS Code Extensions
-
-- **Python**: [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [Django](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django)
-- **Linters**: [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff), [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- **Markdown**: [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-- **Utilities**: [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme), [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
 
 ---
 
@@ -157,9 +148,3 @@ Key exclusions:
 - **Python**: `__pycache__/`, `.pytest_cache`, `db.sqlite3`
 - **Node.js**: `node_modules/`
 - **Environment**: `.env`, `env.py`
-
----
-
-This template is your all-in-one solution for efficient, robust development. Start building without worrying about setup.
-
-**Happy Coding!**
