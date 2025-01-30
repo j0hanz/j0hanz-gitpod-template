@@ -13,7 +13,7 @@ A pre-configured development environment. This template is your all-in-one solut
 ## Features
 
 - **Python**: `3.12` via `pyenv`
-- **Node.js**: `20.18.1` via `nvm`
+- **Node.js**: `22.13.0` via `nvm`
 - **MongoDB Shell**: `mongosh`
 - **PostgreSQL**: `16`
 - **Heroku CLI**
@@ -99,7 +99,7 @@ A pre-configured development environment. This template is your all-in-one solut
 
 ### Node.js Setup
 
-- **Version**: 20.18.1
+- **Version**: 22.13.0
 - **Global Tools**: `npm`, `pnpm`, `yarn`, `typescript`, `eslint`, `prettier`, `node-gyp`
 
 ### PostgreSQL Setup
